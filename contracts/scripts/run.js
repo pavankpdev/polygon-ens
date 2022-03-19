@@ -11,6 +11,10 @@ const main = async () => {
 
     const domainOwner = await domainContract.getAddress('pavan');
     console.log(`Domian owner ${domainOwner}`)
+
+    txn = await domainContract.connect(randomPerson).setRecord("pavan", "Haha my domain now!");
+    await txn.wait();
+
 };
 
 const runMain = async () => {
