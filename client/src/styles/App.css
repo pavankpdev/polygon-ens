@@ -1,0 +1,113 @@
+#hero {
+  height:100vh;
+  width:100vw;
+  background:red;
+  display:flex;
+  align-items:center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+#hero::after {
+  width:100%;
+  height:100%;
+  content: '';
+  position:absolute;
+  z-index:10;
+  top:0;
+  left:0;
+  background:rgba(0,0,0,0.5)
+}
+
+
+#hero video {
+  width:100%;
+  height:100%;
+  position:absolute;
+  top:0;
+  left:0;
+  z-index:5;
+  object-fit:cover;
+  font-family:'object-fit: cover';
+}
+
+
+#hero .texture {
+  width:100%;
+  height:100%;
+  position:absolute;
+  top:0;
+  left:0;
+  z-index:15;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+#hero > .App {
+  position:relative;
+  z-index:20;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  align-items: center;
+  color: white;
+}
+
+.App > .container {
+  max-width:768px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem
+}
+
+.App > .container > h2 {
+  text-align:center;
+  color:#ffffff;
+  font-weight: 900;
+  font-size: 40px;
+}
+
+button{
+  border-radius:0;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+button:focus:not(:focus-visible){outline:0}button,input,optgroup,select,textarea{margin:0;font-family:inherit;font-size:inherit;line-height:inherit}
+.btn-primary{
+  color:#fff;
+  background-color:#FE6A00;
+  border-color:#0d6efd;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-weight: 800;
+  font-size: 20px;
+}
+
+.btn-primary:hover{
+  color:#fff;
+  background-color:#983105;
+  border-color:#0a58ca;
+  transition: all .5s linear;
+}
+
+.btn-metamask {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  background-color: #fff;
+  color: #f58717;
+}
+
+.btn-metamask > .metamask-logo {
+  width: 50px;
+  height: 50px;
+}
+
+.btn-metamask > .metamask-logo > img {
+  width: 100%;
+  height: 100%;
+}
