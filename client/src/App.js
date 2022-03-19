@@ -1,8 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import './styles/App.css';
-import twitterLogo from './assets/twitter-logo.svg';
-
 import BG_Video from './assets/video/dsc.mp4'
+import Inputs from './components/Inputs'
 
 const App = () => {
 	const [isWalletConnected, setIsWalletConnect] = useState(true)
@@ -76,7 +75,7 @@ const App = () => {
 
 				  }
 				  {
-					  web3Supported &&
+					  web3Supported && !currentAccount &&
 					  <button className={'btn-primary btn-metamask'} onClick={connectWallet}>
 						  <div className={'metamask-logo'}>
 							  <img src={'https://upload.wikimedia.org/wikipedia/commons/thumb/3/36/MetaMask_Fox.svg/1200px-MetaMask_Fox.svg.png'} alt={'Metamask logo'} />
@@ -84,6 +83,12 @@ const App = () => {
 						  Connect your metamask wallet
 					  </button>
 				  }
+
+				  {
+					  web3Supported && currentAccount &&
+						  <Inputs />
+				  }
+
 			  </div>
 
 		  </div>
