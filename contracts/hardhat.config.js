@@ -20,8 +20,8 @@ module.exports = {
   solidity: "0.8.10",
   networks: {
     mumbai: {
-      url: "https://polygon-mumbai.g.alchemy.com/v2/e5X5TCL-0GBdm_iP9LnsNskTgeAHPHrS",
-      accounts: ["d6b86ae9d0d4f409825152de970df62f20bc951ad3135e3e7a2b4de03ecc5e3a"],
+      url: process.env.ALCHEMY_URL,
+      accounts: [process.env.ALCHEMY_URL],
     }
   }
 };
